@@ -1,0 +1,1078 @@
+// program to chech wearther yhe number is divisible by 2 or not
+
+
+program 
+
+#include<stdio.h>
+void main()
+{
+int a;
+printf("enter the number\n");
+scanf("%d",&a);
+if(a%2==0)
+{
+    printf("the number is divided by 2 \n");
+}
+else
+{
+
+printf("the number is not divided by 2  \n");
+return 0;
+}
+}
+
+//program on relational operator
+
+program
+
+#include<stdio.h>
+void main()
+{
+ int sunday=0;
+ int snowing=1;
+ printf("%d",(sunday&&snowing));
+}
+
+
+//progam to chech the number range relational operator
+
+program'
+
+#include<stdio.h>
+void main()
+{
+ int a;
+ printf("enter the number");
+ scanf("%d",&a);
+ if((a>9)&&(a<100))
+ {
+     
+    printf("true");
+ }
+ else
+ {
+     printf("false");
+ }
+
+}
+
+
+
+// program to get average of 3 numbers
+
+programs
+
+#include<stdio.h>
+void main()
+{
+ int a,b,c,average;
+ printf("enter the number\n");
+ scanf("%d%d%d",&a,&b,&c);
+ average=(a+b+c)/3;
+ printf("the average number of 3 number is %d",average);
+
+}
+
+
+
+//program to chech the char is digit or not
+
+program
+
+#include<stdio.h>
+void main()
+{
+char ch;
+printf("enter the character\n");
+scanf("%c",&ch);
+if((ch>='0')||(ch<='9'))
+{
+
+    printf("enter character is digit");
+
+}
+else {
+    printf("enter character is not digit");
+}
+}
+
+//program to print the smalllest number
+
+program
+
+#include<stdio.h>
+void main()
+
+{
+  int num1;
+  int num2;
+  int num3;
+ printf("enter the number\n");
+ scanf("%d%d%d",&num1,&num2,&num3);
+ if((num1<num2)&&(num1<num3))
+ {
+     printf("%d  is smallest number is num1\n",num1);
+ }
+ else if( (num2<num1)&&(num2<num3))
+ {
+
+    printf(" %d smallest number is num2 \n",num2);
+ }
+ else
+ {
+     printf("the smalllest number num3 \n ",num3);
+ }
+}
+
+
+alternate
+
+#include<stdio.h>
+void main()
+
+{
+  int num1;
+  int num2;
+  int num3;
+ printf("enter the number\n");
+ scanf("%d%d%d",&num1,&num2,&num3);
+ if((num1<num2)&&(num1<num3))
+ {
+     printf("%d  is smallest number is num1\n",num1);
+ }
+ else if(num3<num2)
+ {
+
+    printf(" %d smallest number is num2 \n",num3);
+ }
+ else
+ {
+     printf(" %d the smalllest number num3 \n ",num2);
+ }
+}
+
+// program for calculator using switch case
+
+program
+
+
+#include<stdio.h>
+void main()
+{
+char ch;
+int num1;
+int num2;
+printf("enter the numbers\n");
+scanf("%d%d",&num1,&num2);
+printf("enter the operator\n");
+getchar();
+scanf("%c",&ch);
+switch(ch)
+{
+case '+':
+    printf(" %d + %d =%d addition \n",num1,num2,num1+num2);
+    break;
+case '-':
+      printf("%d - %d =%d substraction \n",num1,num2,num1-num2);
+      break;
+case '*':
+      printf("%d * %d =%d multiplication\n",num1,num2,num1*num2);
+      break;
+case '/':
+    if(num2)
+        {
+            printf("%d / %d =%d divide\n",num1,num2,num1/num2);
+        }
+    else
+    {
+     printf(" number is not divisible\n");
+    }
+      break;
+default:
+        printf("not in the scope\n");
+}
+
+}
+
+//program to check the days using switch cases
+
+program
+
+#include<stdio.h>
+void main()
+{
+
+int day;
+printf("enter the numbers 1.sunday\n2.monday\n3.tuesday\n4.wednesday"};
+scanf("%d",&day);
+switch(day)
+{
+case 1:
+    printf("Yes..it is monday\n");
+    break;
+case 2:
+      printf("Yes..it is tuesday\n");
+    case 3:
+     printf("Yes..it is wednesday\n");
+        
+        break;
+    case 4:
+         printf("Yes..it is thursday\n");
+    
+        break;
+    default:
+        printf("not in the scope\n");
+}
+}
+
+
+////nested loop programming
+#include<stdio.h>
+int main()
+{
+    void num;
+    printf("enter the num\n");
+    scanf("%d",&num);
+    if(num>=0)
+
+    {
+        printf("the number is positive\n");
+
+        if(num%2==0)
+        {
+            printf("even");
+        }
+        else
+        {
+            printf("odd");
+        }
+
+
+    }
+    else{
+        printf("the number is negative\n");
+        if(num==-2)
+        {
+
+
+        printf("exact number");
+    }
+    else
+        printf("not exact");
+    }
+}
+
+
+
+//excerise program on conditional operator
+#include<stdio.h>
+ void main()
+{
+    int mark;
+    printf("enter the mark\n");
+    scanf("%d",&mark);
+    if(mark>30 && mark<=100)
+    {
+        printf("pass");
+    }
+    else if(mark>0 && mark<=30)
+    {
+            printf("fail");
+    }
+    else
+    {
+            printf("not in range");
+    }
+}
+
+//excerise program on conditional operator for grading marks using switch statment
+#include<stdio.h>
+int main()
+{
+    int mark;
+    printf("enter the mark\n");
+    scanf("%d",&mark);
+    switch(mark)
+    {
+ case 0 ... 30:// (give space for giving conditions valur 0 space ... space 30)
+printf(" grade C");
+break;
+case 31 ... 70:
+printf(" grade B");
+break;
+case 71 ... 90:
+printf(" grade A");
+break;
+case 91 ... 100:
+printf(" grade A+");
+break;
+default:
+    printf("not in range");
+    }
+}
+
+
+
+//excerise program on conditional operator for grading marks using if statment
+#include<stdio.h>
+int main()
+{
+    int mark;
+    printf("enter the mark\n");
+    scanf("%d",&mark);
+    if(mark>0 && mark<30)
+    {
+        printf("fails grade c");
+
+    }
+    else if(mark>=30 && mark<70)
+    {
+        printf("grade b");
+
+    }
+    else if(mark>=70 && mark<90)
+    {
+        printf("grade a");
+
+    }
+    else if (mark>=90 && mark<100)
+    {
+        printf(" grade a");
+
+    }
+    else
+    {
+        printf("not in range");
+    }
+}
+
+//program to find the factorial number
+#include<stdio.h>
+void main()
+{
+
+    int n,i,fact=1;
+    printf("enter the number\n");
+    scanf("%d",&n);
+    for(i=1; i<=n; i++)
+    {
+        fact=fact*i;
+        {
+            printf(" %d factorial of number\n",fact );
+        }
+    }
+}
+
+//program to perform the table  number
+#include<stdio.h>
+void main()
+{
+
+    int n,i;
+    printf("enter the number\n");
+    scanf("%d",&n);
+    for(i=10;i>=0;i--)
+    {
+        printf("%d\n",n*i);
+    }
+}
+
+//program to draw the star pttern
+#include<stdio.h>
+void main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=5;j>=i;j--)
+        {
+            printf("*");
+    }printf("\n");
+
+    }
+}
+
+//program using functions 
+
+
+#include<stdio.h>
+void printhello(int*,int*);
+void main()
+
+
+{
+    int a=5,b=5,c;
+  printhello(&a,&b);
+  //printhello();
+}
+void printhello(int*x,int*z)
+{
+    int c;
+    c=*x+*z;
+
+    printf("%d",c);
+
+}
+
+// program using  functions
+
+#include<stdio.h>
+void french(char);
+//char ch;
+void main()
+{
+    char ch;
+    printf("user Nationality\n");
+    scanf("%c",&ch);
+    french(ch);
+}
+void french(char ch)
+{
+    if(ch=='f')
+    {
+        printf("bounjor\n");
+    }
+    else
+    {
+
+        printf("namaste\n");
+    }
+}
+
+//proram to find the sum using the function using call by refrence
+
+
+#include<stdio.h>
+void addition(int *,int *);
+void main()
+{
+    int ch1,ch2,sum=0;
+    printf("enter the numbers\n");
+    scanf("%d%d",&ch1,&ch2);
+    addition(&ch1,&ch2);
+}
+void addition(int*a,int*b)
+{
+    int sum;
+    sum=*a+*b;
+    printf("sum of two number %d\n",sum);
+
+    if(sum%2==0)
+
+
+    {
+        printf("even numbwe\n");
+    }
+    else
+        {
+        printf("odd numbwe\n");
+    }
+
+}
+
+
+//program to of functions usimh return value
+
+#include<stdio.h>
+int sum(int,int);
+void main()
+{
+    int a,b;
+    printf("enter the numbers\n");
+    scanf("%d%d",&a,&b);
+   int d=sum(a,b);
+   printf("sum is %d",d);
+
+}
+int sum(int c,int d)
+{
+return c+d;
+}
+
+
+//program to convert the tepmperature in celcius
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+float n,temp;
+printf("enter the the celcuis temperatur\n");
+scanf("%f",&n);
+temp=n*(9/5)+32;
+printf("the converted temperature is %f :\n",temp);
+
+}
+
+
+//program to convert the tepmperature in celcius by using functions
+
+#include<stdio.h>
+#include<math.h>
+float temp(float);
+void main()
+{
+    float n;
+   printf("enter the temperature\n");
+   scanf("%f",&n);
+   temp(n);
+  float far=n*(9/5)+32;
+    printf("%f",far);
+}
+float temp(float far )
+{
+return far;
+}
+
+
+
+
+//PROGRAM TO FIND THE PERCENTAGE OF STUDENT
+
+#include<stdio.h>
+void pe(int,int,int);
+void main()
+{
+    int science=50;
+    int english=50;
+    int social=50;
+    pe(science,english,social);
+0
+}
+void pe(int a,int b,int c)
+{
+    //int percentage;
+    float percentage=(float)(a+b+c)/300;
+    printf("%g",percentage*100);
+}
+
+
+
+
+
+//PROGRAM TO swap the number using functions
+
+#include<stdio.h>
+void swap(int,int);
+void main()
+{
+    int a=5,b=10;
+    scanf("%d%d",&a,&b);
+    swap(a,b);
+
+}
+void swap(int x,int z)
+{
+    int temp;
+      temp=x;
+      x=z;
+      z=temp;
+    printf("%d %d",x,z);
+
+}
+
+// program using function for sum,product ,average of two numbers
+
+#include<stdio.h>
+void sum(int*,int*,int *,int *,int *);
+
+void main()
+{
+    int product=0,average=0,temp=0;
+    int x=3;
+    int y=5;
+     //d=sum(x,y);
+     sum(&x,&y,&product,&average,&temp);
+    printf("Average = %d\n product  = %d\n sum =%d\n ",average,product,temp);
+    return 0;
+
+
+}
+void sum(int *a,int *b,int * product,int * average,int *temp)
+{
+    //int average;
+    //int temp;
+    *temp=*a+*b;
+    *product=(*a)*(*b);
+    *average=*temp/2;
+
+
+    //average=temp/2;
+    //return average;
+    //printf("sum is %d\n",sum);
+
+}
+
+//wap to find the largest number between two numbers 
+
+#include<stdio.h>
+void compare(int*,int*);
+void main()
+{
+    int a,b;
+    printf("enter the numbers\n");
+    scanf("%d%d",&a,&b);
+    compare(&a,&b);
+
+}
+void compare(int*x,int*z)
+{
+
+    if(*x>*z)
+    {
+        printf("highest value =%d\n",*x);
+    }
+    else
+    {
+    printf("highest value =%d",*z);
+    }
+}
+
+
+
+
+
+//wap to print the alll the english alphabets
+
+#include<stdio.h>
+void main()
+{
+    char ch='a';
+    char *ptr=&ch;
+//printf("%c\n",*ptr);
+
+
+    printf("printing all alphapehts\n");
+for(int i=0;i<26;i++)
+{
+
+
+    printf("%c",*ptr);
+    (*ptr)++;
+}
+
+
+}
+
+//pattern program
+
+#include<stdio.h>
+void main()
+{
+    int i,j;
+    for(i=0; i<=5; i++)
+    {
+        for(int k=0;k<i;k++)
+        {
+            printf(" ");
+        }
+
+        for(j=5; j>=i; j--)
+        {
+          printf("*");
+        }
+          printf("\n");
+    }
+}
+
+
+
+or
+
+#include<stdio.h>
+void main()
+{
+    int i,j;
+   for(i=0; i<5; i++)
+    {
+        for(j=0; j<5; j++)
+        {
+           if(j<i)
+          printf("  ");*/
+          //else
+            printf("* ");
+        }
+        printf("\n");
+
+    }
+}
+//wap to find the total items and print that itmes with gst
+
+#include<stdio.h>
+void main()
+{
+    float total;
+    float arr[5]={6,9,7};
+    printf(" oil item %f\n",arr[0]);
+    printf(" veggies %f\n",arr[1]);
+    printf("bread %f\n",arr[2]);
+    printf("total  items : \n1 oil %f\n2 veggies %f\n3 bread %f\n",arr[0]*0.18,arr[1]*0.18,arr[2]*0.18);
+    total =arr[0]+arr[1]+arr[2]+arr[0]*0.18 +arr[1]*0.18+arr[2]*0.18;
+    printf("total items %f ",total);
+}
+
+
+//wap to print the number of element using pointer
+
+#include<stdio.h>
+void main()
+{
+    int i;
+    int arr[5];
+    int *ptr=&arr[0];
+    for(i=0; i<5; i++)
+    {
+        printf("enter the number %d\n",i);
+        scanf("%d",(ptr+i));
+    }
+        for(i=0; i<5; i++)
+        {
+            printf("%d",*(ptr+i));
+        }
+    }
+
+//wap using arrays of functions and print the elements
+
+#include<stdio.h>
+void number(int arr[],int n);
+void main()
+{
+
+int n=5;
+    int arr[n];
+    for(int i=0; i<n; i++)
+    {
+
+        scanf("%d",&arr[i]);
+
+    }
+    number(arr ,n);
+}
+
+void number(int arr[],int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+        printf("%d",arr[i]);
+
+}
+
+
+//wap to count the numbers of odd number in array using functionn
+
+#include<stdio.h>
+void odd(int arr[],int n);
+void main()
+{
+    int i,n=4;
+    int arr[]= {5,6,8,9};
+    for(i=0; i<4; i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+    odd(arr,n);
+
+}
+void odd(int arr[],int n)
+{
+    int count=0;
+    for(int i=0; i<n; i++)
+    {
+        if(!(arr[i]%2))
+        {
+
+            count++;
+        }
+    }
+    printf("count of odd numbers= %d",count);
+
+}
+
+//wap to reverse the array elemensts
+#include<stdio.h>
+void main()
+{
+    int n,i;
+    printf("enter the size\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter the elements\n");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0; i<(n/2); i++)
+    {
+        int temp=arr[i];
+        arr[i]=arr[n-1-i];
+        arr[n-1-i]=temp;
+    }
+    for (i=0; i<n; i++)
+    {
+
+        printf("arr[%d]=%d\n",i,arr[i]);
+    }
+}
+
+
+//wap to reverse the array elemensts usimg function
+#include<stdio.h>
+void reverse(int ,int );
+void main()
+{
+    int n,i;
+    printf("enter the size\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter the elements\n");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    reverse(arr,n);
+}
+void reverse(int arraaa[],int n)
+{
+    int i;
+    for(i=0; i<(n/2); i++)
+    {
+        int temp=arr[i];
+        arr[i]=arr[n-1-i];
+        arr[n-1-i]=temp;
+    }
+    for (i=0; i<n; i++)
+    {
+
+        printf("arr[%d]=%d\n",i,arr[i]);
+    }
+}
+
+
+
+
+
+//wap for primting elemnts of array using functiions
+
+#include<stdio.h>
+void reverse(int arr[],int n);
+void print(int arr[],int d);
+void input(int arr[],int n);
+void main()
+{
+    int n=5;
+    int arr[n];
+
+    input(arr,n);
+    reverse(arr,n);
+    print(arr,n);
+}
+void reverse(int arr[],int n)
+{
+     int i;
+
+    for (int i=0;i<n/2;i++)
+    {
+
+        int temp;
+         temp=arr[i];
+        arr[i]=arr[n-i-1];
+        arr[n-i-1]=temp;
+    }
+   // printf("%d\n",arr[i]);
+
+}
+void print(int arr[],int n)
+{
+    printf("printing the array elements\n");
+    int i;
+    for(i=0;i<n;i++)
+    {
+    printf("%d\n",arr[i]);
+    }
+}
+void input(int arr[],int n)
+{
+    //printf("enter the size of array\n ");
+    //int arr[5];
+    printf("Enter the array elements\n");
+    for(int i=0;i<5;i++)
+    {
+    scanf("%d",&arr[i]);
+    }
+}
+
+//wap to print the string using function
+
+#include<stdio.h>
+void print(char arr[]);
+void main()
+{
+
+    char first[]="abdul";
+char last[]="nafi";
+print(first);
+print(last);
+}
+void print(char arr[])
+{
+     int i;
+for(i=0;arr[i]!='\0';i++)
+{
+    printf("%c",arr[i]);
+}
+printf("\n");
+}
+
+
+//wap to print the string using function using gets function
+
+#include<stdio.h>
+void print(char arr[]);
+void main()
+{
+        char arr[50];
+        gets(arr);
+    printf("enter the name\n %s",arr);
+
+print(arr);
+}
+
+
+void print(char arr[])
+{
+     int i;
+for(i=0;i<=7;i++)
+{
+    printf("%s\n",arr[i]);
+}
+printf("\n");
+}
+
+//wap to print the string using function using gets function
+
+#include<stdio.h>
+void print(char arr[]);
+void main()
+{
+        char arr[50];
+        gets(arr);
+    printf("enter the name\n %s",arr);
+
+print(arr);
+}
+
+
+void print(char arr[])
+{
+     int i;
+for(i=0;i<=7;i++)
+{
+    printf("%s\n",arr[i]);
+}
+printf("\n");
+}
+
+//wap to print the string using function using gets function
+
+#include<stdio.h>
+void main()
+{
+    char i;
+    char arr[50];
+    int temp;
+    printf("enter the name\n");
+    scanf("%s",arr);
+    printf("the entered string is\n");
+
+    for(i=0; arr[i]!='\0'; i++)
+    {
+        printf("%c",arr[i]);
+
+    }
+   // printf("%s",arr);
+
+    printf("\n length of the string =%d",i);
+}
+
+
+//wap using to print the user input and count the lenght of same
+
+#include<stdio.h>
+void print(char arr[]);
+int count(char arr[]);
+void main()
+{
+int i;
+    char arr[50];
+    printf("enter the name\n");
+    fgets(arr,20,stdin);
+    char counts(arr);
+    printf("%d",count(arr));
+
+    return 0;
+
+
+
+
+
+}
+void print(char arr[])
+{
+    for(int i=0;arr[i]!='\0';i++)
+    {
+        printf("%c",arr[i]);
+    }
+}
+int count(char arr[])
+{
+    char count=0;
+    for(int i=0;arr[i]!='\0';i++)
+    {
+        count++;
+    }
+    return count-1;
+
+}
+
+wap to print the details iof student using the structure
+
+#include<stdio.h>
+struct student{
+int roll;
+char classs;
+char section;
+};
+void main()
+{
+    struct student s1;
+    s1.roll=22;
+    s1.classs=2;
+    s1.section='a';
+
+    printf("the roll number = is %d\n",s1.roll);
+     printf("the class number =is %d\n",s1.classs);
+      printf("the section number= %c\n",s1.section);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
