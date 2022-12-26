@@ -1,5 +1,5 @@
 
-// program to reverse the array 
+// program to reverse the 
 #include <stdio.h>
 
 int main() {
