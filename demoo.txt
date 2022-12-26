@@ -1,0 +1,317 @@
+
+// program to reverse the array 
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter array size\n");
+    scanf("%d",&num);
+    int arr[num];
+    printf("enter the elements of array\n");
+   int i;
+    for(i=0;i<num;i++)
+    {
+    scanf("%d",&arr[i]); 
+    }
+    printf("Array elements before reversing\n");
+     for(i=0;i<num;i++)
+    {
+    printf(" %d ",arr[i]);
+    }
+     for(i=0;i<num/2;i++)
+    {
+        int temp=0; 
+        temp=arr[i];
+        arr[i]=arr[num-1-i];
+         arr[num-1-i]=temp;
+    }
+    printf("\n");
+     printf("Array elements after reversing\n");
+     for(i=0;i<num;i++)
+    {
+    printf(" %d ",arr[i]);
+    }
+    
+}
+
+
+//program to print the elements of aarray
+int main() {
+    int num;
+    printf("Enter array size\n");
+    scanf("%d",&num);
+    int arr[num];
+    printf("enter the elements of array\n");
+   int i;
+    for(i=0;i<num;i++)
+    {
+    scanf("%d",(arr+i));
+    }
+    printf("Array elements\n");
+     for(i=0;i<num;i++)
+    {
+    printf(" %d ",arr[i]);
+    }
+
+
+
+
+
+//SIZE OF ARRAY
+#include <stdio.h>
+int main()
+{
+    char char_array_1[5] = {'H', 'E', 'L', 'L', 'O'};
+    char char_array_2[] = "Hello";
+    int a=sizeof(char_array_1);
+    int b=sizeof(char_array_2);
+    printf("size of char_array_1=%d\nsize of char_array_2=%d\n",a,b);
+    return 0;
+}
+
+//sIZE OF ARRAY
+int main()
+{
+    char *str = "Hello";
+    sizeof(str);
+    printf("%d",sizeof(str));
+    return 0;
+}
+
+//string manipulation
+#include <stdio.h>
+int main()
+{
+    char str1[6] = "Hello";
+    char str2[6];
+    printf("%s\n", str1);
+    str2 = "World";
+
+
+
+    char *str3 = "Hello";
+    char *str4;
+    str4 = "World";
+
+    str1[0] = 'h';
+
+    str3[0] = 'w';
+    printf("%s\n", str1);
+    printf("%s\n", str2);
+return 0;
+}
+
+
+//string sharing
+#include <stdio.h>
+int main()
+{
+    char *str1 = "Hello";
+    char *str2 = "Hello";
+        if (str1 == str2)
+            {
+                printf("Hoo. They share same space\n");
+                printf("%p\n%p",str1,str2);
+            }
+        else
+            {
+                printf("No. They are in different space\n");
+            }
+return 0;
+}
+
+//String passing to a function
+#include <stdio.h>
+void print(const char *str)
+{
+    while (*str)
+        {
+            putchar(*str++);
+        }
+}
+int main()
+{
+    char *str = "Hello World";
+    print(str);
+    return 0;
+}
+
+// pionter sample program
+#include <stdio.h>
+
+void main()
+
+{
+
+int a=10;      // variable declaration
+
+int *p;      // pointer variable declaration
+
+p = &a;     // store address of variable 'a' in pointer 'p'
+
+printf("Address stored in a variable p is: %x\n", p);    // accessing the address
+
+printf("Value stored in a variable p is: %d\n", *p);     // accessing the value
+
+getch();
+
+}
+
+//Changing Value Pointed by Pointers
+#include <stdio.h>
+int main()
+{
+int*pc,c;
+c = 22;
+printf("Address of c: %p\n", &c);
+printf("Value of c: %d\n\n", c); // 22
+pc = &c;
+printf("Address of pointer pc: %p\n", pc);
+ printf("Content of pointer pc: %d\n\n", *pc); // 22
+ c= 11;
+printf("Address of pointer pc: %p\n", pc);
+printf("Content of pointer pc: %d\n\n", *pc); // 11
+*pc = 2;
+printf("Address of c: %p\n", &c);
+printf("Value of c: %d\n\n", c); // 2
+}
+
+
+//pointer-Array
+#include <stdio.h>
+void main()
+{
+    int a[5]={1,2,3,4,5};    //array initialization
+ int *p;                         //pointer declaration
+/*the ptr points to the first element of the array*/
+p=a;                            /*We can also type simply ptr==&a[0] */
+printf("Printing the array elements using pointer\n");
+for(int i=0;i<5;i++)          //loop for traversing array elements
+{
+printf("\n%x",*p);           //printing array elements
+p++;                            //incrementing to the next element, you can also write p=p+
+}
+}
+
+
+//pointer fucntion
+#include<stdio.h>
+int add_array (int *p, int size);
+int
+main ()
+{
+  int arr[5] = { 100, 220, 37, 16, 98 };
+  printf ("Sum is %d\n", add_array (arr, 5));
+}
+
+int
+add_array (int *p, int size)
+{
+  int total = 0;
+  int k;
+  for (k = 0; k < size; k++)
+    {
+      total += p[k];
+/* it is equivalent to total +=*p;p++; */
+    }
+  return (total);
+}
+
+//sample program of to print the details of the employee
+#include<stdio.h>
+  #include<string.h>
+struct emp
+  {
+   int Id;
+   char N[20];
+   int S;
+   int A;
+   long int P;
+  }e[3];
+  void add_details(struct emp e[])
+  {
+     //for(int i=0;i<3;i++)
+   //{
+    static int i=0;
+   printf("Enter the Id\t");
+   scanf("%d",&e[i].Id);
+   printf("Enter the Name\t");
+   scanf("%s",e[i].N);
+   printf("Enter the Salary\t");
+   scanf("%d",&e[i].S);
+   printf("Enter the Age\t");
+   scanf("%d",&e[i].A);
+   printf("Enter the Phone Number\t");
+   scanf("%ld",&e[i].P);
+    // }
+    i++;
+  }
+  void print_details(struct emp e[])
+  {
+    int R;
+     printf("\n\nSearch emp by Id Number =\t");
+   scanf("%d",&R);
+for(int i=0;i<3;i++)
+  {
+    if(e[i].Id==R)
+      {
+           printf("\n Emp Details:");
+           printf("\n Name: %s",e[i].N);
+           printf("\n Salary: %d",e[i].S);
+           printf("\n Age: %d",e[i].A);
+           printf("\n Phone Number: %ld",e[i].P);
+     }
+  }
+  }
+  void main()
+  {
+    int i=0;
+    int R;
+    char ch;
+    do
+    {
+    printf("\n1.Add Details\n2.Search by Id\n3.Exit\n");
+    scanf(" %c",&ch);
+    switch(ch)
+    {
+      case '1':
+        add_details(e);
+        break;
+      case '2':
+        print_details(e);
+        break;
+    }
+    }
+    while(ch!='3');
+  }
+
+
+// program to replace each string of one or more blank by a single blank
+#include<stdio.h>
+void
+replace_blank (char *str)
+{
+  int i, j;			//declration
+  for (i = 0; str[i] != '\0'; i++)
+    {
+      if ((str[i] == ' ' && str[i + 1] == ' ') || (str[0] == ' '))	//logic for rmoving the multiple space characters
+	{
+	  for (j = i; str[j] != '\0'; j++)
+	    {
+	      str[j] = str[j + 1];	//assigning next character to current index
+	    }
+	  i--;
+	}
+    }
+}
+int main ()
+{
+  char str[100];
+  printf("Enter the string with more spaces in between two words\n");
+  scanf ("%[^\n]", str);
+  replace_blank (str);		//function calling
+  printf ("%s\n", str);		//printing output
+}
+
+
+
