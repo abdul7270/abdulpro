@@ -1,0 +1,113 @@
+//wap to find the smallest of three interger without using any of the comparison eperators
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d=0;
+    scanf("%d%d%d",&a,&b,&c);
+    while(a&&b&&c)
+    {
+        a--;
+        b--;
+        c--;
+        d++;
+    }
+        printf("%d",d);
+
+}
+
+//wap to exact lower nibble from the byte
+
+#include<stdio.h>
+int main()
+{
+char x=19;
+int y=0;
+y=x&0x0f;
+printf("%d",y);
+}
+
+//wap to exact higher nibble from the byte
+
+#include<stdio.h>
+int main()
+{
+char x=19;
+int y=0;
+y=x&0xf0;
+printf("%d",y);
+}
+
+//wap to using bitwise operator to sawp two numbers
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+printf("enter the number\n");
+scanf("%d%d",&a,&b);
+a=a^b;
+b=a^b;
+a=a^b;
+printf("%d",a);
+}
+
+//wap to add two number using recursion
+
+#include<stdio.h>
+int add(int num1,int num2);
+int main()
+{
+       int y=add(5,3);
+    printf("%d",y);
+
+}
+int add(int num1,int num2)
+{
+
+    if(num2==0)
+        return num1;
+    return add(num1,num2-1)+1;
+    
+}
+
+// wap using the enum 
+
+#include<stdio.h>
+enum day{monday,tuesday=50,wednesday};
+int main()
+{
+    enum day today;
+    today=wednesday;
+    printf("%d",today);
+
+}
+
+//wap to print 50 times brigosha without using the loop and goto statment
+
+#include<stdio.h>
+int print(int num);
+int main()
+{
+  print(0) ;
+}
+int print(int num)
+{
+   if(num<50)
+   {
+       printf("%d brigosha",num+1);
+       print(++num);
+   }
+}
+
+//wap to find the 2s compliment of any number
+
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int y=~a+1;
+    printf("%d",y);
+}
+
+
